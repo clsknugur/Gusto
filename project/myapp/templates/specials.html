@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+  {% load static %}
+<div id="features" class="text-center">
+  <div class="section-title">
+    <h2>{{ Specials.title }}</h2>
+  </div>
+    <div class="container">
+      <div class="row">
+      {% for Specials in special %}
+        <div class="col-xs-12 col-sm-4">
+          <div class="features-item"> 
+            <h3>{{ Specials.name }}</h3>
+            <img src="{{ Specials.image.url }}" class="img-responsive"/>
+            <p>{{ Specials.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- Bootstrap -->
+{% endblock content %}
+

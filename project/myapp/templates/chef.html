@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div id="team">
+    <div class="container">
+      <div id="row">
+      {% for Chef in chefs %}
+        <div class="col-md-6">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="section-title">
+              <h2>{{ Chef.title }}</h2>
+            </div>
+            <p>{{ Chef.descripton }}</p>
+            <p>{{ Chef.descripton1 }}</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="team-img"><img src="{{ Chef.image.url }}"/></div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endblock content %}

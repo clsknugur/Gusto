@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div id="restaurant-menu">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Menu</h2>
+    </div>
+      <div class="row">
+        <h2 class="menu-section-title">Breakfast & Starters</h2>
+        <h2 class="menu-section-title">MAIN COURSE</h2>
+      </div>
+    {% for Menu in menuss %}
+    <!-- Restaurant Menu Section -->
+        <div class="col-xs-12 col-sm-6">
+          <div class="menu-section">
+            <div class="menu-item">
+              <div class="menu-item-name">{{ Menu.name }}</div>
+              <div class="menu-item-price"> {{ Menu.price }} </div>
+              <div class="menu-itbıem-description"> {{ Menu.description }}</div>
+            </div>
+         </div>
+       </div>
+    {% endfor %}
+  </div>
+</div>
+
+        
+  
+<!-- Gallery Section -->
+<div id="gallery">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="{% static 'img/gallery/01.jpg' width="500" height="333" %}" class="img-responsive" alt=""/></div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="{% static 'img/gallery/02.jpg' width="500" height="333" %}" class="img-responsive" alt=""/></div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="{% static 'img/gallery/03.jpg' width="500" height="333" %}" class="img-responsive" alt=""/></div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="{% static 'img/gallery/04.jpg' width="500" height="333" %}" class="img-responsive" alt=""/></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
